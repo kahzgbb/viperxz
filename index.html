@@ -203,23 +203,24 @@
             <a href="https://discord.gg/PTKfrtEmjB" class="button" target="_blank" rel="noopener noreferrer">
                 Teste Gratuitamente
             </a> </br></br></br></br>
-            <p id="scans">Scans 0</p> <!-- Elemento para exibir o contador -->
+            <p id="scan-count">Loading...</p>
         </div>
     </div>
 
-    <script>
-        // Função para atualizar o número de scans
-        function updateScanCount() {
-            fetch('https://scan-counter.vercel.app/api/getScanCount')  // Substitua pela sua URL real
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('scans').textContent = `Scans ${data.count}`;
-                })
-                .catch(error => console.error('Erro ao buscar o número de scans:', error));
+     <script>
+        async function fetchScanCount() {
+            try {
+                const response = await fetch('https://viperxz.vercel.app/api/scan_completed.js');  // Faz uma requisição GET para o endpoint
+                const data = await response.json();
+                document.getElementById('scan-count').innerText = data.scans;  // Atualiza o texto no elemento HTML
+            } catch (error) {
+                console.error("Erro ao buscar o número de scans:", error);
+                document.getElementById('scan-count').innerText = 'Erro ao carregar';
+            }
         }
 
-        // Atualiza o contador ao carregar a página
-        updateScanCount();
+        // Chama a função para buscar o número de scans ao carregar a página
+        fetchScanCount();
     </script>
 </body>
 </html>
