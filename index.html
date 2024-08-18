@@ -154,7 +154,6 @@
             radial-gradient(circle, transparent 10%, #3380ff 15%, transparent 20%),
             radial-gradient(circle, #3380ff 20%, transparent 20%),
             radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
             radial-gradient(circle, #3380ff 20%, transparent 20%);
           background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
           background-position: 50% 0%;
@@ -196,7 +195,7 @@
         </div>
         <div class="line"></div>
         <h2>Sobre o Programa</h2>
-        <p>Nosso objetivo e facilitar sua telagem parar os cheaters e maximizar a eficiência.</p> </br></br>
+        <p>Nosso objetivo é facilitar sua telagem para os cheaters e maximizar a eficiência.</p> </br></br>
         <p>- Saiba Mais -</p>
         <p>O projeto está em fase de desenvolvimento e teste, estamos incrementando mais funcionalidades para deixar sua telagem a nível profissional.</p> </br>
         <p>Se interessou no projeto?</p> </br>
@@ -207,5 +206,20 @@
             <p id="scans">Scans 0</p> <!-- Elemento para exibir o contador -->
         </div>
     </div>
+
+    <script>
+        // Função para atualizar o número de scans
+        function updateScanCount() {
+            fetch('https://scan-counter.vercel.app/api/getScanCount')  // Substitua pela sua URL real
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('scans').textContent = `Scans ${data.count}`;
+                })
+                .catch(error => console.error('Erro ao buscar o número de scans:', error));
+        }
+
+        // Atualiza o contador ao carregar a página
+        updateScanCount();
+    </script>
 </body>
 </html>
