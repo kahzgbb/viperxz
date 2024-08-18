@@ -204,22 +204,8 @@
             <a href="https://discord.gg/PTKfrtEmjB" class="button" target="_blank" rel="noopener noreferrer">
                 Teste Gratuitamente
             </a> </br></br></br></br>
-            <p id="scan-count">Scans 0</p> <!-- Elemento para exibir o contador -->
+            <p id="scans">Scans 0</p> <!-- Elemento para exibir o contador -->
         </div>
     </div>
-    <script>
-        function updateScanCount() {
-            fetch('/api/count')
-              .then(response => response.json())
-              .then(data => {
-                  document.getElementById('scan-count').innerText = `Scans realizados: ${data.count}`;
-              })
-              .catch(error => console.error('Erro:', error));
-        }
-
-        window.onload = updateScanCount;
-
-        setInterval(updateScanCount, 1000); // 10000 ms = 10 segundos
-    </script>
 </body>
 </html>
