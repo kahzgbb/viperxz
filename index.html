@@ -3,239 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViperXZ - Project</title>
-    <link rel="icon" href="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c3e8c3&is=66c29743&hm=31e5828a5db479974ac83aacd3ee5407603552ed176b73d14b05e03ca469f380&" type="image/x-icon">
-    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c3e8c3&is=66c29743&hm=31e5828a5db479974ac83aacd3ee5407603552ed176b73d14b05e03ca469f380&" type="image/x-icon">
+    <title>Viper Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
         body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #1a1a1a, #333333);
             font-family: 'Poppins', sans-serif;
-            text-align: center;
-        }
-
-        .centered-text {
-            line-height: 1;
+            font-weight: 500;
+            background-color: #000000; /* Fundo preto */
+            color: #ffffff; /* Cor do texto branco */
             margin: 0;
             padding: 0;
+            text-align: center;
+            overflow-x: hidden;
         }
-
-        .titles {
-            display: inline-block;
-            margin: 0;
+        .topboard-titles {
+            margin: 0px;
+            margin-top: 250px;
         }
-
         h1 {
-            font-size: 80px;
-            background: linear-gradient(45deg, #00b3ff, #0072ff);
+            font-size: 50px;
+            background: linear-gradient(135deg, #00bfff, #1e90ff); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8); /* Brilho azul claro */
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
             margin: 0;
         }
 
         h2 {
-            font-size: 36px;
-            background: linear-gradient(45deg, #cccccc, #999999);
+            font-size: 15px;
+            background: linear-gradient(135deg, #6825e4, #690bff); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(150, 85, 255, 0.8);
             margin: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center; /* Centraliza os elementos na navbar */
+            align-items: center;
+            background-color: #111; /* Cor de fundo da navbar */
+            padding: 10px 0;
+            border-bottom: 2px solid #333; /* Linha de separação inferior */
         }
 
-        strong {
-            font-size: 30px;
-            background: linear-gradient(45deg, #00b3ff, #0072ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 0;
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Limita a largura da navbar */
+            justify-content: space-between; /* Espaça o título e os links */
+            padding: 0 20px; /* Espaçamento nas laterais */
         }
-        
-        .centered-text p {
+
+        .navbar-title a {
             font-size: 24px;
-            margin: 0;
-            background: linear-gradient(45deg, #cccccc, #999999);
+            font-weight: bold;
+            color: #1e90ff; /* Cor do título */
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.8); /* Brilho no título */
+            text-decoration: none; /* Remove o sublinhado do link */
+            transition: text-shadow 0.3s ease; /* Suaviza o efeito de brilho */
+        }
+
+        .navbar-title a:hover {
+            text-shadow: 0 0 15px rgba(30, 144, 255, 1); /* Intensifica o brilho ao passar o mouse */
+        }
+
+        .navbar-links a {
+            color: #fff; /* Cor dos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+            margin: 0 15px; /* Espaçamento entre os links */
+            font-size: 13px;
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza a mudança de cor e brilho */
+        }
+
+        .navbar-links a:hover {
+            color: #1e90ff; /* Cor do link ao passar o mouse */
+            text-shadow: 0 0 10px rgba(30, 144, 255, 0.8); /* Brilho nos links ao passar o mouse */
+        }
+        .icon {
+            font-size: 48px; /* Tamanho do ícone */
+            color: #1e90ff; /* Cor do ícone */
+            animation: bounce 2s infinite; /* Animação de subida e descida */
+            transition: color 0.3s ease; /* Animação suave de cor */
+            margin-top: 70px;
+        }
+
+        .icon:hover {
+            color: #00bfff; /* Cor ao passar o mouse */
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0); /* Posição inicial e final */
+            }
+            50% {
+                transform: translateY(-10px); /* Altura máxima da animação */
+            }
+        }
+        .content-box {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            width: 100%; /* Preenche a página toda para os lados */
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #0d0d0e; /* Cor de fundo da caixa */
+            margin-top: 150px;
+        }
+
+        .inner-content {
+            max-width: 1200px; /* Limita a largura máxima */
+            width: 100%;
+            text-align: center;
+        }
+
+        .inner-content h1 {
+            font-size: 20px;
+            background: linear-gradient(135deg, #3687f0, #3768ee); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 89, 255, 0.8);
+            margin: 0;
+        }
+        .title-container {
+            margin: 20px 0;
         }
 
-        .line {
-            width: 80%;
-            height: 4px;
-            margin: 20px auto; 
-            background: linear-gradient(90deg, #00b3ff, #0072ff);
-            border-radius: 2px; 
+        .title-container h1, .title-container h2 {
+            color: #1e90ff; /* Cor dos títulos */
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.8); /* Brilho nos títulos */
+            margin: 0;
+            animation: grow 4s infinite alternate; /* Animação suave e contínua */
         }
 
-        .cont2 {
-            margin-top: 50px;
-            justify-content: left;
-        }
-
-        .cont2 p {
-            font-size: 5;
-        }
-
-        .logo-container img {
-            margin-top: 10px;
-            width: 50px;
-            height: 50;
-        }
-
-        .button {
-          position: relative;
-          padding: 10px 22px;
-          border-radius: 6px;
-          border: none;
-          color: #fff;
-          cursor: pointer;
-          background-color: #3380ff;
-          transition: all 0.2s ease;
-          text-decoration: none;
-        }
-
-        .button:active {
-          transform: scale(0.96);
-        }
-
-        .button:before,
-        .button:after {
-          position: absolute;
-          content: "";
-          width: 150%;
-          left: 50%;
-          height: 100%;
-          transform: translateX(-50%);
-          z-index: -1000;
-          background-repeat: no-repeat;
-        }
-
-        .button:hover:before {
-          top: -70%;
-          background-image: radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, transparent 20%, #3380ff 20%, transparent 30%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, transparent 10%, #3380ff 15%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%);
-          background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-            10% 10%, 18% 18%;
-          background-position: 50% 120%;
-          animation: greentopBubbles 0.6s ease;
-        }
-
-        @keyframes greentopBubbles {
-          0% {
-            background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-              40% 90%, 55% 90%, 70% 90%;
-          }
-
-          50% {
-            background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-              50% 50%, 65% 20%, 90% 30%;
-          }
-
-          100% {
-            background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-              50% 40%, 65% 10%, 90% 20%;
-            background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-          }
-        }
-
-        .button:hover::after {
-          bottom: -70%;
-          background-image: radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, transparent 10%, #3380ff 15%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%),
-            radial-gradient(circle, #3380ff 20%, transparent 20%);
-          background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
-          background-position: 50% 0%;
-          animation: greenbottomBubbles 0.6s ease;
-        }
-
-        @keyframes greenbottomBubbles {
-          0% {
-            background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-              70% -10%, 70% 0%;
-          }
-
-          50% {
-            background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-              105% 0%;
-          }
-
-          100% {
-            background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-              110% 10%;
-            background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-          }
-        }
-
-        .cont3 {
-            margin-top: 30px;
-        }
-
-        p {
-            font-size: 5px;
-        }
-
-        .cont4 a {
-            text-decoration: underline;
-        }
-
-        .cont4 p {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="centered-text">
-        <div class="titles">
-            <h1>ViperXZ</h1>
-            <h2>Minecraft Scanner</h2>
-        </div>
-        <div class="line"></div>
-        <h2>Sobre o Programa</h2>
-        <p>Nosso objetivo é facilitar sua telagem para os cheaters e maximizar a eficiência.</p> </br></br>
-        <p>- Saiba Mais -</p>
-        <p>O projeto está em fase de desenvolvimento e teste, estamos incrementando mais funcionalidades para deixar sua telagem a nível profissional.</p> </br>
-        <p>Se interessou no projeto?</p> </br>
-        <div class="cont3">
-            <a href="https://discord.gg/PTKfrtEmjB" class="button" target="_blank" rel="noopener noreferrer">
-                Teste Gratuitamente
-            </a> </br></br></br></br>
-            <p id="scan-count">Loading...</p>
-        </br></br>
-            <p>Quer saber mais sobre o projeto? Confira:</p>
-            <div class="cont4">
-                <a href="https://docs.viperxz.vercel.app/"><p>Documentação ➡</p></a>
-            </div>
-        </div>
-    </div>
-
-     <script>
-        async function fetchScanCount() {
-            try {
-                const response = await fetch('https://viperxz.vercel.app/api/scan_completed.js');  // Faz uma requisição GET para o endpoint
-                const data = await response.json();
-                document.getElementById('scan-count').innerText = data.scans;  // Atualiza o texto no elemento HTML
-            } catch (error) {
-                console.error("Erro ao buscar o número de scans:", error);
-                document.getElementById('scan-count').innerText = 'Erro ao carregar';
+        @keyframes grow {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.06);
             }
         }
 
-        // Chama a função para buscar o número de scans ao carregar a página
-        fetchScanCount();
-    </script>
+        strong {
+            font-size: 21px;
+            background: linear-gradient(135deg, #3671dd, #3768ee); /* Degradê azul claro */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 89, 255, 0.8);
+            margin: 0;
+        }
+
+.button {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  padding: 5px 50px;
+  margin: 50px;
+  background: linear-gradient(45deg, #1f3ce4, #4f0bbd);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 25px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(100%) rotateX(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.button:hover::before {
+  transform: translateY(0) rotateX(0);
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 15px;
+  border: 1px solid #00b5ff;
+  z-index: -1;
+}
+
+.button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.button:active {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+}
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .formatted-text{
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            text-align: right;
+            margin: 0;
+            display: inline;
+            padding: 20px;
+        }
+
+    .formatted-text strong {
+            font-size: 18px;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #3671dd, #3768ee); /* Degradê azul claro */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(0, 89, 255, 0.8);
+            margin: 0;
+    }
+    .footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de box */
+            margin: 0;
+            margin-top: 111px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+        }
+    .footer-rooftop {
+        display: flex;
+        padding: 50px;
+    }
+
+    .footer-rooftop p {
+        font-size: 10px;
+    }
+
+    .footer-rooftop-1 {
+        padding: 12px;
+    }
+
+    .footer-rooftop-content {
+        display: block;
+        position: relative;
+        text-align: left;
+        margin: 0px;
+        left: 820px;
+    }
+
+    .footer-rooftop-content a:hover {
+        color: #00bfff;
+        text-decoration: underline;
+    }
+
+    .footer-rooftop-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.6s ease, text-decoration 0.6s ease;
+    }
+    
+    .links-ref {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        left: 210px;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-title">
+                <a href="/">(001000)</a>
+            </div>
+            <div class="navbar-links">
+                <a href="/">Home</a>
+                <a href="#services">Serviços</a>
+                <a href="#about">Sobre</a>
+                <a href="/help/discord/">Contato</a>
+            </div>
+        </div>
+    </div>
+    <div class="topboard-titles">
+        <div class="title-container">
+            <h1>ViperXZ</h1>
+            <h2>Procurar, Localizar e Encontrar.</h2>
+        </div>
+        <div class="icon-container">
+            <span class="material-icons icon">expand_more</span>
+        </div>
+        <div class="content-box">
+            <div class="inner-content" id="about">
+                <h1>Começe a elevar o nível de suas detecções</h1>
+                <p>Use <strong>gratuitamente</strong> nossa ferramente de scan para detectar os trapeceiros.</p>
+                <p>Oferecemos suporte para vários cheats atualmente, usando ferramentas avançadas de scan</p>
+                <p>conseguimos oferecer varias funções além da detecção de cheats para completar sua screenshare.</p>
+                <button class="button">
+                     <a href="/help/discord/">Participar</a>
+                </button>
+                <h1>Sobre o projeto</h1>
+                <div class="formatted-text" id="services">
+                    <h1>
+                    - Viper project
+                    </h1>
+                    <p>É um projeto feito totalmente por</p>
+                    <p>brasileiros com ferramentas de scan</p>
+                    <p><strong>avançadas</strong> para garantir resultados</p>
+                    <p>precisos e informações para sua telagem</p>
+                    <p>sair do <strong>seu jeito</strong>, temos uma interface</p>
+                    <p>dinâmica e fácil de se usar com sistema de key</p>
+                    <p><strong>gratuito</strong>, sem complicações e com segurança.</p>
+                </div>
+                <div class="footer">
+                    <div class="footer-rooftop">
+                        <img style="width: 40px; height: 40px; left: 30px; justify-content: flex-start;" src="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c73483&is=66c5e303&hm=0a8336edfd4e707edcbe5188ee5e7fc0f2515d4dbd80c2e4b715a1b3f8f27678&">
+                            <div class="footer-rooftop-1">
+                                <p>(001000) - ViperXZ Project</p>
+                            </div>
+                                <div class="footer-rooftop-content">
+                                    <a href="">TOS</a> </br>
+                                    <a href="">Privacy Policy</a>
+                                </div>
+                                    <div class="links-ref">
+                                        <a href="/help/discord/">
+                                            <img style="width: 20px; height: 15px;" src="https://cdn.discordapp.com/attachments/1274214881943490642/1275323374482227253/dC5wbmc.png?ex=66c77332&is=66c621b2&hm=f53cd0097438411a5fe7d2938f0bea388f4f284530efd3728f6a0afda2f4c58d&">
+                                        </a>    
+                                    </div>
+                    </div>
+                </div>
+            </div>
+            <img style="width: 283px; justify-content: flex-start; position: absolute; margin: 227px; padding-right: 140vh;" src="https://media.discordapp.net/attachments/1274214881943490642/1275943948996841583/viperxzsite2_prev_ui.png?ex=66c7bae7&is=66c66967&hm=174e27a59ab1223ae056525151cdb163d28dbd6cb0a7c6a88c8faff49b29ec87&=&format=webp&quality=lossless&width=473&height=473">
+    </div>
 </body>
 </html>
