@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viper Project</title>
-    <link rel="icon" href="https://media.discordapp.net/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c73483&is=66c5e303&hm=0a8336edfd4e707edcbe5188ee5e7fc0f2515d4dbd80c2e4b715a1b3f8f27678&=&format=webp&quality=lossless" type="image/x-icon">
-    <link rel="shortcut icon" href="https://media.discordapp.net/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c73483&is=66c5e303&hm=0a8336edfd4e707edcbe5188ee5e7fc0f2515d4dbd80c2e4b715a1b3f8f27678&=&format=webp&quality=lossless" type="image/x-icon">
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c3e8c3&is=66c29743&hm=31e5828a5db479974ac83aacd3ee5407603552ed176b73d14b05e03ca469f380&" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c3e8c3&is=66c29743&hm=31e5828a5db479974ac83aacd3ee5407603552ed176b73d14b05e03ca469f380&" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
         body {
             font-family: 'Poppins', sans-serif;
             font-weight: 500;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #000000; /* Fundo preto */
+            color: #ffffff; /* Cor do texto branco */
             margin: 0;
             padding: 0;
             text-align: center;
@@ -26,10 +26,10 @@
         }
         h1 {
             font-size: 50px;
-            background: linear-gradient(135deg, #00bfff, #1e90ff);
+            background: linear-gradient(135deg, #00bfff, #1e90ff); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+            text-shadow: 0 0 10px rgba(0, 191, 255, 0.8); /* Brilho azul claro */
             margin: 0;
         }
         p {
@@ -39,7 +39,7 @@
 
         h2 {
             font-size: 15px;
-            background: linear-gradient(135deg, #6825e4, #690bff);
+            background: linear-gradient(135deg, #6825e4, #690bff); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(150, 85, 255, 0.8);
@@ -47,88 +47,88 @@
         }
         .navbar {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Centraliza os elementos na navbar */
             align-items: center;
-            background-color: #111;
+            background-color: #111; /* Cor de fundo da navbar */
             padding: 10px 0;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #333; /* Linha de separação inferior */
         }
 
         .navbar-content {
             display: flex;
             align-items: center;
             width: 100%;
-            max-width: 1200px;
-            justify-content: space-between;
-            padding: 0 20px;
+            max-width: 1200px; /* Limita a largura da navbar */
+            justify-content: space-between; /* Espaça o título e os links */
+            padding: 0 20px; /* Espaçamento nas laterais */
         }
 
         .navbar-title a {
             font-size: 24px;
             font-weight: bold;
-            color: #1e90ff;
-            text-shadow: 0 0 5px rgba(30, 144, 255, 0.8);
-            text-decoration: none;
-            transition: text-shadow 0.3s ease;
+            color: #1e90ff; /* Cor do título */
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.8); /* Brilho no título */
+            text-decoration: none; /* Remove o sublinhado do link */
+            transition: text-shadow 0.3s ease; /* Suaviza o efeito de brilho */
         }
 
         .navbar-title a:hover {
-            text-shadow: 0 0 15px rgba(30, 144, 255, 1);
+            text-shadow: 0 0 15px rgba(30, 144, 255, 1); /* Intensifica o brilho ao passar o mouse */
         }
 
         .navbar-links a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
+            color: #fff; /* Cor dos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+            margin: 0 15px; /* Espaçamento entre os links */
             font-size: 13px;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
+            transition: color 0.3s ease, text-shadow 0.3s ease; /* Suaviza a mudança de cor e brilho */
         }
 
         .navbar-links a:hover {
-            color: #1e90ff;
-            text-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+            color: #1e90ff; /* Cor do link ao passar o mouse */
+            text-shadow: 0 0 10px rgba(30, 144, 255, 0.8); /* Brilho nos links ao passar o mouse */
         }
         .icon {
-            font-size: 48px;
-            color: #1e90ff;
-            animation: bounce 2s infinite;
-            transition: color 0.3s ease;
+            font-size: 48px; /* Tamanho do ícone */
+            color: #1e90ff; /* Cor do ícone */
+            animation: bounce 2s infinite; /* Animação de subida e descida */
+            transition: color 0.3s ease; /* Animação suave de cor */
             margin-top: 70px;
         }
 
         .icon:hover {
-            color: #00bfff;
+            color: #00bfff; /* Cor ao passar o mouse */
         }
 
         @keyframes bounce {
             0%, 100% {
-                transform: translateY(0);
+                transform: translateY(0); /* Posição inicial e final */
             }
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-10px); /* Altura máxima da animação */
             }
         }
         .content-box {
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            height: 100vh;
-            width: 100%;
+            height: 170vh;
+            width: 100%; /* Preenche a página toda para os lados */
             padding: 20px;
             box-sizing: border-box;
-            background-color: #0d0d0e;
+            background-color: #0d0d0e; /* Cor de fundo da caixa */
             margin-top: 150px;
         }
 
         .inner-content {
-            max-width: 1200px;
+            max-width: 1200px; /* Limita a largura máxima */
             width: 100%;
             text-align: center;
         }
 
         .inner-content h1 {
             font-size: 20px;
-            background: linear-gradient(135deg, #3687f0, #3768ee);
+            background: linear-gradient(135deg, #3687f0, #3768ee); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(0, 89, 255, 0.8);
@@ -139,10 +139,10 @@
         }
 
         .title-container h1, .title-container h2 {
-            color: #1e90ff;
-            text-shadow: 0 0 5px rgba(30, 144, 255, 0.8);
+            color: #1e90ff; /* Cor dos títulos */
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.8); /* Brilho nos títulos */
             margin: 0;
-            animation: grow 4s infinite alternate;
+            animation: grow 4s infinite alternate; /* Animação suave e contínua */
         }
 
         @keyframes grow {
@@ -156,7 +156,7 @@
 
         strong {
             font-size: 21px;
-            background: linear-gradient(135deg, #3671dd, #3768ee);
+            background: linear-gradient(135deg, #3671dd, #3768ee); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(0, 89, 255, 0.8);
@@ -236,7 +236,7 @@
     .formatted-text strong {
             font-size: 18px;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #3671dd, #3768ee);
+            background: linear-gradient(135deg, #3671dd, #3768ee); /* Degradê azul claro */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(0, 89, 255, 0.8);
@@ -247,9 +247,9 @@
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para efeito de box */
             margin: 0;
-            margin-top: 111px;
+            margin-top: 80px;
             position: relative;
             justify-content: center;
             align-items: center;
@@ -276,8 +276,7 @@
     }
 
     .footer-rooftop-content a:hover {
-        color: #00bfff;
-        text-decoration: underline;
+        color: #0051ff;
     }
 
     .footer-rooftop-content a {
@@ -294,6 +293,88 @@
         justify-content: center;
         align-items: center;
         left: 210px;
+        margin-top: 10px;
+    }
+
+    .links-ref img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .links-ref img:hover {
+        transform: scale(1.2);
+    }
+    .single-rooftop {
+        margin-top: 100px;
+        text-align: center;
+        text-transform: none;
+    }
+
+    .double-rooftop {
+        font-family: 'Poppins', sans-serif;
+        margin-top: 5px;
+    }
+
+    .double-rooftop p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        text-transform: none;
+    }
+
+    .mape-rooftop-content p {
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .box-rooftop {
+        width: 160px;
+        height: 160px;
+        padding: 30px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        border: 1px, solid #4218ff;
+        border-radius: 5px;
+        margin-top: 40px;
+        background-color: #0e0d0d;
+        margin-left: 490px;
+    }
+
+    .box-rooftop strong {
+        font-size: 17px;
+    }
+
+    #red {
+            font-size: 17px;
+            background: linear-gradient(135deg, #c20c0c, #db1223); /* Degradê azul claro */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 2, 2, 0.8);
+            margin: 0;
+    }
+
+    .pre-footer-rooftop {
+        margin-top: 35px;
+    }
+
+    .pre-footer-rooftop p {
+        font-family: sans-serif;
+        font-size: 12px;
+        color: #dad0d0;
+        opacity: 0.1;
+    }
+
+    .pre-footer-rooftop a {
+        font-family: sans-serif;
+        font-size: 12px;
+        color: #dad0d0;
+        opacity: 0.3;
+        transition: color 0.6s ease, text-shadow 0.6s ease;
+    }
+
+    .pre-footer-rooftop a:hover {
+        opacity: 0.5;
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
     }
     </style>
 </head>
@@ -320,14 +401,14 @@
             <span class="material-icons icon">expand_more</span>
         </div>
         <div class="content-box">
-            <div class="inner-content" id="about">
+            <div class="inner-content" id="services">
                 <h1>Começe a elevar o nível de suas detecções</h1>
                 <p>Use <strong>gratuitamente</strong> nossa ferramente de scan para detectar os trapeceiros.</p>
                 <p>Oferecemos suporte para vários cheats atualmente, usando ferramentas avançadas de scan</p>
                 <p>conseguimos oferecer varias funções além da detecção de cheats para completar sua screenshare.</p>
                      <a href="/help/discord/" class="button">Conferir Projeto</a>
                 <h1>Sobre o projeto</h1>
-                <div class="formatted-text" id="services">
+                <div class="formatted-text" id="about">
                     <h1>
                     - Viper project
                     </h1>
@@ -338,12 +419,30 @@
                     <p>sair do <strong>seu jeito</strong>, temos uma interface</p>
                     <p>dinâmica e fácil de se usar com sistema de key</p>
                     <p><strong>gratuito</strong>, sem complicações e com segurança.</p>
+                        <div class="single-rooftop">
+                            <h1>Eleve o nível de suas detecções</h1>
+                            <div class="double-rooftop">
+                                <p>Para garantir que os cheaters seram pegos usamos vários tipos de métodos.</p>
+                            </div>
+                                <div class="box-rooftop">
+                                    <div class="mape-rooftop">
+                                        <h1>Strings</h1>
+                                    </div> 
+                                        <div class="mape-rooftop-content">
+                                            <p>Métodos de busca de strings para localizar arquivos que podem se passar por <strong>legits</strong> mas são <strong id="red">cheats</strong>.</p>
+                                        </div>
+                                </div>
+                                    <div class="pre-footer-rooftop">
+                                        <a href="/privacy">Confira Privacy Policy</a>
+                                        </div>
+                       </div>
                 </div>
                 <div class="footer">
                     <div class="footer-rooftop">
-                        <img style="width: 40px; height: 40px; left: 30px; justify-content: flex-start;" src="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c73483&is=66c5e303&hm=0a8336edfd4e707edcbe5188ee5e7fc0f2515d4dbd80c2e4b715a1b3f8f27678&">
+                        <img style="margin-top: 8px; width: 40px; height: 40px; left: 30px; justify-content: flex-start;" src="https://cdn.discordapp.com/attachments/1274214881943490642/1274893681102553221/viperxzicon-removebg-preview.png?ex=66c73483&is=66c5e303&hm=0a8336edfd4e707edcbe5188ee5e7fc0f2515d4dbd80c2e4b715a1b3f8f27678&">
                             <div class="footer-rooftop-1">
                                 <p>(001000) - ViperXZ Project</p>
+                                <p>viperxzproject@gmail.com</p>
                             </div>
                                 <div class="footer-rooftop-content">
                                     <a href="">TOS</a> </br>
@@ -357,7 +456,7 @@
                     </div>
                 </div>
             </div>
-            <img style="width: 283px; justify-content: flex-start; position: absolute; margin: 227px; padding-right: 140vh;" src="https://media.discordapp.net/attachments/1274214881943490642/1275943948996841583/viperxzsite2_prev_ui.png?ex=66c7bae7&is=66c66967&hm=174e27a59ab1223ae056525151cdb163d28dbd6cb0a7c6a88c8faff49b29ec87&=&format=webp&quality=lossless&width=473&height=473">
+            <img style="width: 283px; justify-content: flex-start; position: absolute; margin: 239px; padding-right: 140vh;" src="https://media.discordapp.net/attachments/1274214881943490642/1275943948996841583/viperxzsite2_prev_ui.png?ex=66c7bae7&is=66c66967&hm=174e27a59ab1223ae056525151cdb163d28dbd6cb0a7c6a88c8faff49b29ec87&=&format=webp&quality=lossless&width=473&height=473">
     </div>
 </body>
 </html>
