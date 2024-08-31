@@ -1,58 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Anticheat</title>
+    <title>Gerador de Keys</title>
     <style>
         body {
-            background-color: #000;
-            color: #fff;
+            background-color: black;
+            color: white;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            color: #008CBA;
-        }
-        .dashboard-container {
             text-align: center;
+            padding-top: 50px;
         }
         button {
             background-color: #008CBA;
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
             border: none;
-            cursor: pointer;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
             font-size: 16px;
-        }
-        button:hover {
-            background-color: #005f73;
-        }
-        .key-display {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #00FF00;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="dashboard-container">
-        <h1>Dashboard Anticheat</h1>
-        <button onclick="generateKey()">Gerar Nova Chave</button>
-        <div class="key-display" id="keyDisplay">Nenhuma chave gerada ainda.</div>
-    </div>
+
+    <h1>Gerar Key</h1>
+    <button id="generateKeyButton">Gerar Key</button>
+    <p id="keyDisplay"></p>
 
     <script>
-        async function generateKey() {
-            const response = await fetch('/api/generate-key');
-            const data = await response.json();
-            document.getElementById('keyDisplay').innerText = 'Nova chave gerada: ' + data.key;
-        }
+        const token = "seu_token_jwt_aqui";  // Insira aqui o token JWT obtido após o login
+
+        document.getElementById("generateKeyButton").addEventListener("click", function() {
+            fetch("https://viperxz.vercel.app/api/generate-key", {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("keyDisplay").innerText = "Chave gerada: " + data.key;
+            })
+            .catch(error => {
+                console.error("Erro ao gerar a key:", error);
+                document.getElementById("keyDisplay").innerText = "Erro ao gerar a key.";
+            });
+        });
     </script>
+
 </body>
 </html>
