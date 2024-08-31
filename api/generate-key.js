@@ -1,37 +1,22 @@
-const fs = require('fs');
+const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const path = require('path');
-
-// Caminho do arquivo JSON onde as chaves serão armazenadas
-const keyFilePath = path.resolve(__dirname, 'keys.json');
-
-// Função para carregar as chaves armazenadas
-function loadKeys() {
-    if (fs.existsSync(keyFilePath)) {
-        const data = fs.readFileSync(keyFilePath);
-        return JSON.parse(data);
-    } else {
-        return [];
-    }
-}
-
-// Função para salvar as chaves no arquivo
-function saveKeys(keys) {
-    fs.writeFileSync(keyFilePath, JSON.stringify(keys, null, 2));
-}
+const SECRET_KEY = "sua_chave_secreta";
 
 module.exports = (req, res) => {
-    // Gera uma nova chave
-    const newKey = crypto.randomBytes(16).toString('hex');
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
 
-    // Carrega as chaves existentes
-    let keys = loadKeys();
+    if (!token) {
+        return res.status(401).json({ message: "Token não fornecido" });
+    }
 
-    // Adiciona a nova chave ao "banco de dados" de chaves
-    keys.push({ key: newKey, used: false });
+    jwt.verify(token, SECRET_KEY, (err, user) => {
+        if (err) {
+            return res.status(403).json({ message: "Token inválido" });
+        }
 
-    // Salva as chaves atualizadas
-    saveKeys(keys);
-
-    res.status(200).json({ key: newKey });
+        // Gera a nova chave se o token for válido
+        const newKey = crypto.randomBytes(16).toString('hex');
+        res.status(200).json({ key: newKey });
+    });
 };
